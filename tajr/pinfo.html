@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information - Salama Athumani Salimba</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .student-id {
+            color: #7f8c8d;
+            font-weight: normal;
+        }
+        
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .info-section {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .photo-section {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .photo-placeholder {
+            width: 200px;
+            height: 250px;
+            background-color: #ecf0f1;
+            border: 2px dashed #bdc3c7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        
+        .photo-placeholder i {
+            font-size: 50px;
+            color: #7f8c8d;
+        }
+        
+        .info-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: #3498db;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .info-value {
+            color: #2c3e50;
+        }
+        
+        .contact-value {
+            color: #2c3e50;
+            word-break: break-all;
+        }
+        
+        .university {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        
+        .program {
+            color: #27ae60;
+            font-weight: bold;
+        }
+        
+        .location {
+            color: #9b59b6;
+            font-weight: bold;
+        }
+        
+        .upload-btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        .upload-btn:hover {
+            background-color: #2980b9;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+           
+            <p>STUDENT INFORMATION PROFILE</p>
+        </header>
+        
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <span class="info-label">Full Name:</span>
+                    <span class="info-value">Salama Athumani Salimba</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">Registration Number:</span>
+                    <span class="info-value">DCS/28348/2301/DT</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">Institution:</span>
+                    <span class="info-value university">Kampala International University in Tanzania</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">Program:</span>
+                    <span class="info-value program">Diploma in Computer Science</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">Year of Study:</span>
+                    <span class="info-value">Second Year</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">Phone Number:</span>
+                    <span class="contact-value">+255 617 229 596</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">Email Address:</span>
+                    <span class="contact-value">salmasalimba@icloud.com</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">Location:</span>
+                    <span class="info-value location">Gongo La Mboto, Dar es Salaam</span>
+                </div>
+            </div>
+            
+            <div class="photo-section">
+                <div class="photo-placeholder">
+                    <i class="fas fa-user"></i>
+                
+        </div>
+        
+        <footer>
+            <p>This information is valid as of <span id="current-date"></span></p>
+            <p>© 2023 Student Information System - KIU Tanzania</p>
+        </footer>
+    </div>
+
+    <script>
+        // Display current date
+        const now = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('current-date').textContent = now.toLocaleDateString('en-US', options);
+        
+        // Simple photo upload simulation (for demonstration)
+        document.querySelector('.upload-btn').addEventListener('click', function() {
+            alert('In a real application, this would open a file dialog to upload your passport photo.');
+        });
+    </script>
+</body>
+</html>
